@@ -57,3 +57,11 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 ## fix batman-adv
 curl -fSLo "feeds/routing/batman-adv/src/compat-hacks.h" \
     "https://raw.githubusercontent.com/No06/routing/main/batman-adv/src/compat-hacks.h"
+
+## fix umdns error
+rm -f package/network/services/umdns/files/umdns.init
+curl -fSLo "package/network/services/umdns/files/umdns.init" \
+    "https://raw.githubusercontent.com/openwrt/openwrt/e37ad78539d410368de2e5b95388b3acf8686126/package/network/services/umdns/files/umdns.init"
+rm -f package/network/services/umdns/files/umdns.json    
+curl -fSLo "package/network/services/umdns/files/umdns.json" \
+    "https://raw.githubusercontent.com/openwrt/openwrt/e37ad78539d410368de2e5b95388b3acf8686126/package/network/services/umdns/files/umdns.json"
