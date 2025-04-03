@@ -66,5 +66,5 @@ rm -f package/network/services/umdns/files/umdns.json
 curl -fSLo "package/network/services/umdns/files/umdns.json" \
     "https://raw.githubusercontent.com/openwrt/openwrt/e37ad78539d410368de2e5b95388b3acf8686126/package/network/services/umdns/files/umdns.json"
 ## downloadgrade xray
-sed -i 's/25.3.6/1.5.5/g' feeds/packages/net/xray-core/Makefile
-sed -i 's/d62305348deff713767fe1b3c23538e3f8bfe0c96d092f1f95f48c17bc2f5943/3f8d04fef82a922c83bab43cac6c86a76386cf195eb510ccf1cc175982693893/g' feeds/packages/net/xray-core/Makefile
+sed -i 's/25.3.6/1.5.5/g' package/xray-core/Makefile
+sed -i 's/d62305348deff713767fe1b3c23538e3f8bfe0c96d092f1f95f48c17bc2f5943/3f8d04fef82a922c83bab43cac6c86a76386cf195eb510ccf1cc175982693893/g' package/xray-core/Makefile
